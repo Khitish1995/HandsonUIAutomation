@@ -7,7 +7,7 @@ public class Alert {
 		System.out.println("Checking");
 		System.out.println("Checking");
 		System.out.println("Checking");
-		System.out.println("Checing");
+		System.out.println("ChecKKing");
 	}
 
 }
