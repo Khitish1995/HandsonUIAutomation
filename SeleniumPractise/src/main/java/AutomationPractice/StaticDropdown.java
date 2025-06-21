@@ -26,6 +26,10 @@ public class StaticDropdown {
 		drpdown.selectByIndex(3);
 		Thread.sleep(2000);
 		driver.quit();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		
 
 	}
