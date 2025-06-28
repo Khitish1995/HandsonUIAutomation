@@ -12,45 +12,48 @@ import org.openqa.selenium.support.ui.Select;
 public class Practise {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
+
 		System.setProperty("Webdriver.chrome.driver", "C:\\Softwares\\SeleniumWebdriver\\ChromeDriver\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice");
 		driver.manage().window().maximize();
+		String state = "India";
+		driver.findElement(By.xpath("//input[@id='autocomplete']")).click();
 		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//input[@id='autocomplete']")).click();
-//		driver.findElement(By.xpath("//input[@id='autocomplete']")).sendKeys("Ind");
-//		Thread.sleep(2000);
-//		List<WebElement> listCountry = driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
-//		
-//		String target = "India";
-//		
-//		for(int i=0;i<listCountry.size();i++) {
-//			if(listCountry.get(i).getText().equals(target)) {
-//			listCountry.get(i).click();
-//			System.out.println("Country Clicked");
-//			break;}
-//		}
-		
-		WebElement SSDropdown = driver.findElement(By.xpath("//select[@id='dropdown-class-example']"));
-		
-		Select dropdown = new Select(SSDropdown);
-		dropdown.selectByContainsVisibleText("Option1");
+		driver.findElement(By.xpath("//input[@id='autocomplete']")).sendKeys("Ind");
 		Thread.sleep(2000);
-		System.out.println("option 1 selected");
+		System.out.println("sent country");
+		List<WebElement> countryList = driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
 		
-		dropdown.selectByIndex(2);
+		for(int i=0;i<countryList.size();i++) {
+			if(countryList.get(i).getText().equalsIgnoreCase(state)) {
+				countryList.get(i).click();
+				System.out.println("Clixked country");
+				break;
+			}
+		}
+		
+		WebElement meow = driver.findElement(By.xpath("//select[@id='dropdown-class-example']"));
+		
+		Select drpdown = new Select(meow);
+		drpdown.selectByIndex(1);
+		System.out.println("option 1 is clicked");
 		Thread.sleep(2000);
-		System.out.println("option 2 selected");
-		
-		dropdown.selectByValue("option3");
+		drpdown.selectByVisibleText("Option2");
+		System.out.println("option 2 is clicked");
 		Thread.sleep(2000);
-		System.out.println("option 3 selected");
+		drpdown.selectByValue("option3");
+		System.out.println("option 2 is clicked");
 		
-		System.out.println("Windows closed");
-		driver.close();
+		driver.findElement(By.xpath("//input[@value='Alert']")).click();
+		Thread.sleep(2000);
+		System.out.println("About to click");
+		driver.switchTo().alert().accept();
+		System.out.println("It clicked");
+		
+		
+		driver.quit();
 	}
 
 }
