@@ -23,10 +23,12 @@ public class Practise {
 		driver.get("https://rahulshettyacademy.com/AutomationPractice");
 		driver.manage().window().maximize();
 		//Dynamic Dropdown
+		
 		driver.findElement(By.xpath("//input[contains(@id,'autocomplete')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[contains(@id,'autocomplete')]")).sendKeys("Ind");
 		Thread.sleep(2000);
+
 		String country = "India";
 		List<WebElement> countryList = driver.findElements(By.xpath("//li[contains(@class,'ui-menu-item')]"));
 		for(int i=0;i<countryList.size();i++) {
@@ -38,6 +40,7 @@ public class Practise {
 			}
 		}
 		
+
 		//Static dropdown
 		WebElement dropdown = driver.findElement(By.xpath("//select[contains(@id,'dropdown-class-example')]"));
 		Select staticdrpdown = new Select(dropdown);
