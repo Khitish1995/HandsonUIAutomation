@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import static org.openqa.selenium.support.locators.RelativeLocator.*;
 
 public class Practise {
 
@@ -22,7 +23,9 @@ public class Practise {
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice");
 		driver.manage().window().maximize();
-		//Dynamic Dropdown
+		//DynamicDropdown
+		WebElement nameEditBox = driver.findElement(By.xpath("//input[@placeholder='Type to Select Countries']"));
+		System.out.println(driver.findElement(with(By.tagName("legend")).above(nameEditBox)).getText());
 		driver.findElement(By.xpath("//input[contains(@id,'autocomplete')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[contains(@id,'autocomplete')]")).sendKeys("Ind");
