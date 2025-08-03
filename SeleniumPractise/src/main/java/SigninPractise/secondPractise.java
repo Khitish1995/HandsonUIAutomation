@@ -14,12 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class secondPractise {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 		
-		
-		//Thread.sleep(2000);
-		//driver.quit();
-		
+
 	}
 
 }
