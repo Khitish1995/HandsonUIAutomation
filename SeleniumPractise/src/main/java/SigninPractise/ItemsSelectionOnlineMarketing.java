@@ -14,6 +14,7 @@ public class ItemsSelectionOnlineMarketing {
 		
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
 		driver.manage().window().maximize();
+		
 		String[] itemsNeededname = {"Tomato","Beetroot","Mushroom","Cauliflower"};
 		List<WebElement> veggiesname =driver.findElements(By.xpath("//h4[@class='product-name']"));
 		int j=0;
