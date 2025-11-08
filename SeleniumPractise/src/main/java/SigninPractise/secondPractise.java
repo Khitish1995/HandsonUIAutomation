@@ -35,7 +35,7 @@ public class secondPractise {
 		driver.findElement(By.xpath("//input[@placeholder='Type to Select Countries']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Type to Select Countries']")).sendKeys("Ind");
 		Thread.sleep(2000);
-		
+		System.out.println("Learning for Github through IDE");
 		List<WebElement> qaz = driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
 		String country = "India";
 		for(int i=0;i<qaz.size();i++) {
