@@ -22,8 +22,10 @@ public class Synchronisation {
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2)); //implicitly wait latest
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3)); //Explicitly wait - 1
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[@class='product-name']"))); //Explicitly wait - 2
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3)); //Explicitly wait - step 1 //This line initializes the wait.
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[@class='product-name']"))); //Explicitly wait - step 2
+		//wait.until(...): This is the method that performs the waiting. It polls the DOM for the condition to be met.
+		//ExpectedConditions.visibilityOfElementLocated(By.id("elementId")): This is the condition to wait for.
 		
 		String[] list = {"Beetroot","Brinjal","Potato","Pumpkin"};
 		List<WebElement> veggies = driver.findElements(By.xpath("//h4[@class='product-name']"));
