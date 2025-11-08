@@ -46,7 +46,7 @@ public class secondPractise {
 				break;
 			}
 		}
-		//just for practice
+		
 		Thread.sleep(2000);
 		driver.quit();
 	}
