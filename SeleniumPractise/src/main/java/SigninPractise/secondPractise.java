@@ -20,7 +20,7 @@ import junit.framework.Assert;
 
 public class secondPractise {
 
-	//@SuppressWarnings("deprecation")
+	
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("Webdriver.chrome.driver", "C:\\Softwares\\SeleniumWebdriver\\ChromeDriver\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -46,7 +46,7 @@ public class secondPractise {
 				break;
 			}
 		}
-		
+		//just for practice
 		Thread.sleep(2000);
 		driver.quit();
 	}
