@@ -53,8 +53,5 @@ public class OpenTargetedMultipleTabs {
 		
 		Thread.sleep(2000);
 		driver.quit();
-
-
 	}
-
 }
