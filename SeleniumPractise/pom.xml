@@ -18,12 +18,14 @@
     <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
+
+   <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>6.9.8</version>
-      <scope>test</scope>
-    </dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.10.1</version>
+    <scope>test</scope>
+</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
