@@ -16,9 +16,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import junit.framework.Assert;
 
 public class PaginationConcept {
 
@@ -86,12 +86,32 @@ public class PaginationConcept {
 				System.out.println(name);
 			}
 		}
+		/*
+		 * String[] listname = {"Strawberry","Mango","Brinjal","Banana"};
+		List<String> namearr = Arrays.asList(listname);
 		
+		List<WebElement> veggiesName = driver.findElements(By.xpath("//table[@class='table table-bordered']/child::tbody/tr/td[1]"));
+		List<String> names = new ArrayList<String>();
+		for(WebElement name:veggiesName) {
+			names.add(name.getText());
+		}
+		String nextButton = driver.findElement(By.xpath("//a[@aria-label='Next']")).getAttribute("aria-disabled");
 		
+		while(!nextButton.contains("true")) {
+			Findfruits(driver, namearr);
+			driver.findElement(By.xpath("//a[@aria-label='Next']")).click();
+			
+			/*veggiesName = driver.findElements(By.xpath("//table[@class='table table-bordered']/child::tbody/tr/td[1]"));
+			for(WebElement name:veggiesName) {
+				names.add(name.getText());
+			} */
+			//nextButton = driver.findElement(By.xpath("//a[@aria-label='Next']")).getAttribute("aria-disabled");
+			
+			/*for(String name:names) {
+				System.out.println(name); } */
+			
 		
-		
-		
-		driver.quit();;
+		driver.quit();
 	}
 
 }
