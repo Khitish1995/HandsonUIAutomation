@@ -3,7 +3,7 @@ package SigninPractise;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class animal {
+public class Frequency_of_words {
 	
 	String sentence = "aaa aaa eee ttt eee rrr ttt eee eee rrr rrr ttt ddd fff ddd";
 	
@@ -29,7 +29,7 @@ public class animal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		animal a = new animal();
+		Frequency_of_words a = new Frequency_of_words();
 		a.countWords();
 	
 	}
