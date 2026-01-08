@@ -31,7 +31,7 @@ public class DynamicSearch {
 				break;
 			}
 		}
-
+driver.quit();
 	}
 
 }
